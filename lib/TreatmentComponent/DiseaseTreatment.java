@@ -5,17 +5,13 @@ public class DiseaseTreatment {
     private String medicalTreatment;
     private String tPatient;
     private String rights;
-    private String drug;
-    private String tDrug;
     private String pressure;
 
-    public DiseaseTreatment(String disease, String medicalTreatment, String tPatient, String rights, String drug, String tDrug, String pressure) {
+    public DiseaseTreatment(String disease, String medicalTreatment, String tPatient, String rights, String pressure) {
         this.disease = disease;
         this.medicalTreatment = medicalTreatment;
         this.tPatient = tPatient;
         this.rights = rights;
-        this.drug = drug;
-        this.tDrug = tDrug;
         this.pressure = pressure;
         checkRep();
     }
@@ -32,12 +28,6 @@ public class DiseaseTreatment {
         if (rights == null) {
             throw new RuntimeException("rights is null");
         }
-        if (drug == null) {
-            throw new RuntimeException("drug is null");
-        }
-        if (tDrug == null) {
-            throw new RuntimeException("tDrug is null");
-        }
         if (pressure == null) {
             throw new RuntimeException("pressure is null");
         }
@@ -53,12 +43,6 @@ public class DiseaseTreatment {
     }
     public String getRights() {
         return rights;
-    }
-    public String getDrug() {
-        return drug;
-    }
-    public String getTDrug() {
-        return tDrug;
     }
     public String getPressure() {
         return pressure;
