@@ -78,4 +78,5 @@ public class ReadWriteTreatmentData implements ReadData, WriteData {
         // rwt.writeData("1234567, " + treatment.getCheckInCheckOut().getCheckIn() + ", " + treatment.getDoctorSection().getDoctor() + ", " + treatment.getDiseaseTreatment().getDisease() + ", " + treatment.getDrugs().getDrugNames());
         rwt.readData("123456");
     }
+
 }

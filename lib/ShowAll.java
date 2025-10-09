@@ -3,15 +3,15 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class ShowAll {
-    File file;
+    File f;
     FileReader fr;
     BufferedReader br;
     ArrayList<String> patientList;
 
     public void loadData() {
         try {
-            file = new File("./File/treatment.txt");
-            fr = new FileReader(file);
+            f = new File("./File/Hospital(Patient).csv");
+            fr = new FileReader(f);
             br = new BufferedReader(fr);
             patientList = new ArrayList<>();
             String line;
@@ -38,6 +38,9 @@ public class ShowAll {
     public static void main(String[] args) {
         ShowAll sa = new ShowAll();
         sa.loadData();
-        System.out.println(sa.getAllData());
+        String str = sa.getAllData().toString();
+        String str_temp = str.replace("[", "")
+                .replace("]", "").replace(",", "#");
+        System.out.println(str_temp);
     }
 }
