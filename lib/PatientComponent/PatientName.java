@@ -3,6 +3,7 @@ package lib.PatientComponent;
 // ADT for Patient Name birthday gender religion bloodGroup
 
 public class PatientName {
+    private String title;
     private String fName;
     private String lName;
     private final String birthday;
@@ -19,12 +20,15 @@ public class PatientName {
      * @param religion
      * @param bloodGroup
      */
-    public PatientName(String fName, String lName, String birthday, String gender, String religion, String bloodGroup) {
+    public PatientName(String title, String fName, String lName, String birthday, String gender, String religion, String bloodGroup) {
+        this.title = title;
         this.fName = fName;
         this.lName = lName;
         this.birthday = birthday;
+        this.gender = gender;
         this.religion = religion;
         this.bloodGroup = bloodGroup;
+        checkRep();
     }
     /**
      * Rep Invariant:
@@ -35,6 +39,9 @@ public class PatientName {
      * first name fName, gender, religion, blood group
      */
     private void checkRep() {
+        if (title == null) {
+            throw new RuntimeException("title is null");
+        }
         if (fName == null) {
             throw new RuntimeException("fName is null");
         }
@@ -47,6 +54,14 @@ public class PatientName {
         if (gender == null) {
             throw new RuntimeException("gender is null");
         }
+    }
+
+    /**
+     * Getter for title
+     * @return title
+     */
+    public String getTitle() {
+        return title;
     }
 
     /**
@@ -74,10 +89,21 @@ public class PatientName {
     }
 
     /**
+     * Getter for Gender
+     * @return gender
+     */
+    public String getGender() {
+        return gender;
+    }
+
+    /**
      * Getter for religion
      * @return religion
      */
     public String getReligion() {
+        if (religion == null || religion.equals("")) {
+            return "-";
+        }
         return religion;
     }
     
@@ -86,6 +112,9 @@ public class PatientName {
      * @return bloodGroup
      */
     public String getBloodGroup() {
+        if (bloodGroup == null || bloodGroup.equals("")) {
+            return "-";
+        }
         return bloodGroup;
     }
 }

@@ -23,7 +23,7 @@ public class PatientIDCard {
      */
     private void checkRep() {
         if (idCard == null || idCard.length() != 13) {
-            throw new RuntimeException("ID Card must be 18 characters long");
+            throw new RuntimeException("ID Card must be 13 characters long");
         }
     }
 

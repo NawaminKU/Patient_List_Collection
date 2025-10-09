@@ -47,6 +47,9 @@ public class PatientWeakness {
      * @return allergicDrug
      */
     public String getAllergicDrug() {
+        if (allergicDrug == null || allergicDrug.equals("")) {
+            return "-";
+        }
         return allergicDrug;
     }
     
@@ -55,6 +58,9 @@ public class PatientWeakness {
      * @return allergicFood
      */
     public String getAllergicFood() {
+        if (allergicFood == null || allergicFood.equals("")) {
+            return "-";
+        }
         return allergicFood;
     }
 
@@ -63,6 +69,9 @@ public class PatientWeakness {
      * @return damageAction
      */
     public String getDamageAction() {
+        if (damageAction == null || damageAction.equals("")) {
+            return "-";
+        }
         return damageAction;
     }
 
@@ -71,6 +80,9 @@ public class PatientWeakness {
      * @return abnormalStatus
      */
     public String getAbnormalStatus() {
+        if (abnormalStatus == null || abnormalStatus.equals("")) {
+            return "-";
+        }
         return abnormalStatus;
     }
 }

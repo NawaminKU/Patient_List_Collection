@@ -17,7 +17,22 @@ public class Treament {
         this.doctorSection = doctorSection;
         this.diseaseTreatment = diseaseTreatment;
         this.drugs = drugs;
-        // checkRep();
+        checkRep();
+    }
+
+    private void checkRep() {
+        if (checkInCheckOut == null) {
+            throw new RuntimeException("checkInCheckOut is null");
+        }
+        if (doctorSection == null) {
+            throw new RuntimeException("doctorSection is null");
+        }
+        if (diseaseTreatment == null) {
+            throw new RuntimeException("diseaseTreatment is null");
+        }
+        if (drugs == null) {
+            throw new RuntimeException("drugs is null");
+        }
     }
     /**
      * Getter for checkInCheckOut

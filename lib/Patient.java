@@ -7,6 +7,8 @@ public class Patient {
     private PatientNation nation;
     private PatientLocation location;
     private PatientWeakness weakness;
+    private PatientTell tell;
+    private String Image;
     /**
      * Constructor for Patient
      * @param idCard
@@ -15,12 +17,14 @@ public class Patient {
      * @param location
      * @param weakness
      */
-    public Patient(PatientIDCard idCard, PatientName name, PatientNation nation, PatientLocation location, PatientWeakness weakness) {
+    public Patient(PatientIDCard idCard, PatientName name, PatientNation nation, PatientLocation location, PatientWeakness weakness, PatientTell tell, String Image) {
         this.idCard = idCard;
         this.name = name;
         this.nation = nation;
         this.location = location;
         this.weakness = weakness;
+        this.tell = tell;
+        this.Image = Image;
         checkRep();
     }
 
@@ -46,13 +50,16 @@ public class Patient {
         if (weakness == null) {
             throw new IllegalArgumentException("weakness must be non-null");
         }
+        if (tell == null) {
+            throw new IllegalArgumentException("tell must be non-null");
+        }
     }
 
     /**
      * Getter for idCard
      * @return idCard
      */
-    public PatientIDCard getIdCard() {
+    public PatientIDCard getID() {
         return idCard;
     }
     /**
@@ -82,5 +89,20 @@ public class Patient {
      */
     public PatientWeakness getWeakness() {
         return weakness;
+    }
+    /**
+     * Getter for tell
+     * @return tell
+     */
+    public PatientTell getTell() {
+        return tell;
+    }
+
+    /**
+     * Getter for Image
+     * @return Image
+     */
+    public String getImage() {
+        return Image;
     }
 }

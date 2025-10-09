@@ -9,6 +9,7 @@ public class Drug {
     public Drug(ArrayList<String> drug, ArrayList tDrug) {
         this.drugs = drug;
         this.tDrug = tDrug;
+        checkRep();
     }
 
     private void checkRep() {

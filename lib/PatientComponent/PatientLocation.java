@@ -27,17 +27,17 @@ public class PatientLocation {
      * and city city
      */
     private void checkRep() {
-        if (!(numberHouse instanceof String)) {
-            throw new IllegalArgumentException("numberHouse must be a String");
+        if (numberHouse == null || numberHouse.equals("")) {
+            throw new IllegalArgumentException("numberHouse not must be a null");
         }
-        if (!(village instanceof String)) {
-            throw new IllegalArgumentException("village must be a String");
+        if (village == null || village.equals("")) {
+            throw new IllegalArgumentException("village not must be a null");
         }
-        if (!(district instanceof String)) {
-            throw new IllegalArgumentException("district must be a String");
+        if (district == null || district.equals("")) {
+            throw new IllegalArgumentException("district not must be a null");
         }
-        if (!(city instanceof String)) {
-            throw new IllegalArgumentException("city must be a String");
+        if (city == null || city.equals("")) {
+            throw new IllegalArgumentException("city not must be a null");
         }
     }
 

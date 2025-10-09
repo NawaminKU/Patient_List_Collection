@@ -12,7 +12,7 @@ public class PatientTell {
         this.tellCousin1 = tellCousin1;
         this.tellCousin2 = tellCousin2;
         this.tellCousin3 = tellCousin3;
-        // checkRep();
+         checkRep();
     }
     /**
      * Rep Invariant:
@@ -26,24 +26,27 @@ public class PatientTell {
      * and cousin 3 telephone number tellCousin3
      */
     private void checkRep() {
-        // if (!(tellPatint instanceof String)) {
-        //     throw new IllegalArgumentException("tellPatint must be a String");
-        // }
-        // if (!(tellCousin1 instanceof String)) {
-        //     throw new IllegalArgumentException("tellCousin1 must be a String");
-        // }
-        // if (!(tellCousin2 instanceof String)) {
-        //     throw new IllegalArgumentException("tellCousin2 must be a String");
-        // }
-        // if (!(tellCousin3 instanceof String)) {
-        //     throw new IllegalArgumentException("tellCousin3 must be a String");
-        // }
+         if (!(tellPatint instanceof String)) {
+             throw new IllegalArgumentException("tellPatint must be a String");
+         }
+         if (!(tellCousin1 instanceof String)) {
+             throw new IllegalArgumentException("tellCousin1 must be a String");
+         }
+         if (!(tellCousin2 instanceof String)) {
+             throw new IllegalArgumentException("tellCousin2 must be a String");
+         }
+         if (!(tellCousin3 instanceof String)) {
+             throw new IllegalArgumentException("tellCousin3 must be a String");
+         }
     }
     /**
      * Getter for tellPatint
      * @return tellPatint
      */
     public String getTellPatint() {
+        if (tellPatint == null || tellPatint.equals("")) {
+            return "-";
+        }
         return tellPatint;
     }
     /**
@@ -51,6 +54,9 @@ public class PatientTell {
      * @return tellCousin1
      */
     public String getTellCousin1() {
+        if (tellCousin1 == null || tellCousin1.equals("")) {
+            return "-";
+        }
         return tellCousin1;
     }
     /**
@@ -58,6 +64,9 @@ public class PatientTell {
      * @return tellCousin2
      */
     public String getTellCousin2() {
+        if (tellCousin2 == null || tellCousin2.equals("")) {
+            return "-";
+        }
         return tellCousin2;
     }
     /**
@@ -65,6 +74,9 @@ public class PatientTell {
      * @return tellCousin3
      */
     public String getTellCousin3() {
+        if (tellCousin3 == null || tellCousin3.equals("")) {
+            return "-";
+        }
         return tellCousin3;
     }
 }
