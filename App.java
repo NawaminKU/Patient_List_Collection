@@ -36,8 +36,7 @@ public class  App {
                 P.getName().getTitle() + "," + P.getName().getfName() + "," + P.getName().getlName() + "," + P.getName().getBirthday() + "," + P.getID().getIdCard() + "," + P.getNation().getNotion() + "," + P.getNation().getRace()
                 + "," + P.getName().getReligion() + "," + P.getLocation().getNumberHouse() + "," + P.getLocation().getVillage() + "," + P.getLocation().getDistrict() + "," + P.getLocation().getCity()
                 + "," + P.getName().getGender() + "," + P.getTell().getTellPatint() + "," + P.getTell().getTellCousin1() + "," + P.getTell().getTellCousin2() + "," + P.getTell().getTellCousin3()
-                + "," + P.getName().getBloodGroup() + "," + P.getWeakness().getAbnormalStatus() + "," + P.getWeakness().getAllergicDrug() + "," + P.getWeakness().getAllergicFood() + "," + P.getWeakness().getDamageAction()
-                + "," + P.getImage();
+                + "," + P.getName().getBloodGroup() + "," + P.getWeakness().getAbnormalStatus() + "," + P.getWeakness().getAllergicDrug() + "," + P.getWeakness().getAllergicFood() + "," + P.getWeakness().getDamageAction();
         ReadWritePatientData pd = new ReadWritePatientData();
         pd.writeData(str);
     }
