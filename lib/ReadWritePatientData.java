@@ -92,8 +92,8 @@ public class ReadWritePatientData implements ReadData, WriteData, EditData {
             }
             while ((line = reader.readLine()) != null) {
                 String[] ID = line.split(", ");
-                if (id.equals(ID[0])) {
-                    writer.write(ID[0] + newData);
+                if (id.equals(ID[4])) {
+                    writer.write(ID[4] + newData);
                     found = true;
                 } else {
                     writer.write(line);
