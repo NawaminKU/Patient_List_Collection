@@ -1,1 +1,3 @@
 ﻿id_card,doctor_name,section,patient_type,diagnose,treatment_method,check_in,check_out,weight,high,pressure,treatment_rights,drug,tdrug
+1234567890987,Dr.Adam Warlock,KPS,de,dddd,1:33/31/January/2222,1:50/31/January/2222,33,Time of treatment (hours-minutes),National Health Security Rights,Paracetamol,Tablet
+1212121212121,Dr.Adam Warlock,KPS,sick,para,4:56/4/January/2005,1:45/6/January/2005,45,Time of treatment (hours-minutes),National Health Security Rights,Paracetamol,Tablet

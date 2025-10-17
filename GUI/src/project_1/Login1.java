@@ -17,7 +17,6 @@ public class Login1 extends javax.swing.JFrame {
      */
     public Login1() {
         initComponents();
-        getUser();
         setResizable(false);
         setLocationRelativeTo(null);
        
@@ -183,6 +182,8 @@ jTextField2.addKeyListener(new java.awt.event.KeyAdapter() { //User Font Only
         log = new Login(username, password);
         log.readData(username); // ตรวจสอบข้อมูล
         if (log.authenticate()) {
+            UserName userName = new UserName();
+            userName.setUsername(jTextField2.getText());
         this.dispose();
         new GUI_Searching().setVisible(true);
         } else {
@@ -224,10 +225,6 @@ jTextField2.addKeyListener(new java.awt.event.KeyAdapter() { //User Font Only
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new Login1().setVisible(true));
-    }
-
-    public String getUser() {
-        return jLabel2.getText();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

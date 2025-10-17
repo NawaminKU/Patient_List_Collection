@@ -3,10 +3,10 @@ package lib.TreatmentComponent;
 import java.util.ArrayList;
 
 public class Drug {
-    private ArrayList<String> drugs;
-    private ArrayList<String> tDrug;
+    private String drugs;
+    private String tDrug;
 
-    public Drug(ArrayList<String> drug, ArrayList<String> tDrug) {
+    public Drug(String drug, String tDrug) {
         this.drugs = drug;
         this.tDrug = tDrug;
         checkRep();
@@ -19,14 +19,10 @@ public class Drug {
     }
 
     public String getDrugNames() {
-        String saveFileOfDrug = drugs.toString();
-        saveFileOfDrug = saveFileOfDrug.replace(",", "#");
-        return saveFileOfDrug;
+        return drugs;
     }
 
     public String getTypeDrug() {
-        String saveFileOfTypeDrug = tDrug.toString();
-        saveFileOfTypeDrug = saveFileOfTypeDrug.replace(",", "#");
-        return saveFileOfTypeDrug;
+        return tDrug;
     }
 }
