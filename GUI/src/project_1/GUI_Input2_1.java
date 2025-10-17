@@ -5,7 +5,21 @@
 package GUI.src.project_1;
 
 import java.awt.event.KeyEvent;
-import javax.swing.JOptionPane;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.lang.classfile.AttributedElement;
+import java.util.ArrayList;
+import javax.swing.*;
+import javax.swing.text.AbstractDocument;
+import javax.swing.text.AttributeSet;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.DocumentFilter;
+import lib.*;
+import lib.TreatmentComponent.CheckInCheckOut;
+import lib.TreatmentComponent.DiseaseTreatment;
+import lib.TreatmentComponent.DoctorSection;
 
 /**
  *
@@ -33,11 +47,7 @@ public class GUI_Input2_1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton3 = new javax.swing.JButton();
         jLabel34 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
         jLabel29 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         jComboBox6 = new javax.swing.JComboBox<>();
@@ -75,40 +85,147 @@ public class GUI_Input2_1 extends javax.swing.JFrame {
         jButton9 = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
 
-        jButton3.setBackground(new java.awt.Color(0, 204, 255));
-        jButton3.setText("Search patient information");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+        // jTextField12
+        ((AbstractDocument) jTextField12.getDocument()).setDocumentFilter(new DocumentFilter() {
+            @Override
+            public void insertString(FilterBypass fb, int offset, String str, AttributeSet attr) throws BadLocationException {
+                if (str == null) return;
+                checkAndInsert(fb, offset, 0, str, attr);
+            }
+
+            @Override
+            public void replace(FilterBypass fb, int offset, int length, String text, AttributeSet attrs) throws BadLocationException {
+                if (text == null) return;
+                checkAndInsert(fb, offset, length, text, attrs);
+            }
+
+            private void checkAndInsert(FilterBypass fb, int offset, int length, String text, AttributeSet attrs) throws BadLocationException {
+                String oldText = fb.getDocument().getText(0, fb.getDocument().getLength());
+                String newText = new StringBuilder(oldText)
+                        .replace(offset, offset + length, text).toString();
+
+                if (newText.isEmpty()) {
+                    super.replace(fb, offset, length, text, attrs);
+                    return;
+                }
+
+                try {
+                    int value = Integer.parseInt(newText);
+                    if (value <= 59) {
+                        super.replace(fb, offset, length, text, attrs);
+                    }
+                } catch (NumberFormatException e) {
+                    // ถ้าไม่ใช่ตัวเลข เช่นพิมพ์ตัวอักษร จะไม่ทำอะไร
+                }
             }
         });
+        // jTextfield31
+        ((AbstractDocument) jTextField31.getDocument()).setDocumentFilter(new DocumentFilter() {
+            @Override
+            public void insertString(FilterBypass fb, int offset, String str, AttributeSet attr) throws BadLocationException {
+                if (str == null) return;
+                checkAndInsert(fb, offset, 0, str, attr);
+            }
+
+            @Override
+            public void replace(FilterBypass fb, int offset, int length, String text, AttributeSet attrs) throws BadLocationException {
+                if (text == null) return;
+                checkAndInsert(fb, offset, length, text, attrs);
+            }
+
+            private void checkAndInsert(FilterBypass fb, int offset, int length, String text, AttributeSet attrs) throws BadLocationException {
+                String oldText = fb.getDocument().getText(0, fb.getDocument().getLength());
+                String newText = new StringBuilder(oldText)
+                        .replace(offset, offset + length, text).toString();
+
+                if (newText.isEmpty()) {
+                    super.replace(fb, offset, length, text, attrs);
+                    return;
+                }
+
+                try {
+                    int value = Integer.parseInt(newText);
+                    if (value <= 31) {
+                        super.replace(fb, offset, length, text, attrs);
+                    }
+                } catch (NumberFormatException e) {
+                    // ถ้าไม่ใช่ตัวเลข เช่นพิมพ์ตัวอักษร จะไม่ทำอะไร
+                }
+            }
+        });
+        // jTextfield27
+        ((AbstractDocument) jTextField27.getDocument()).setDocumentFilter(new DocumentFilter() {
+            @Override
+            public void insertString(FilterBypass fb, int offset, String str, AttributeSet attr) throws BadLocationException {
+                if (str == null) return;
+                checkAndInsert(fb, offset, 0, str, attr);
+            }
+
+            @Override
+            public void replace(FilterBypass fb, int offset, int length, String text, AttributeSet attrs) throws BadLocationException {
+                if (text == null) return;
+                checkAndInsert(fb, offset, length, text, attrs);
+            }
+
+            private void checkAndInsert(FilterBypass fb, int offset, int length, String text, AttributeSet attrs) throws BadLocationException {
+                String oldText = fb.getDocument().getText(0, fb.getDocument().getLength());
+                String newText = new StringBuilder(oldText)
+                        .replace(offset, offset + length, text).toString();
+
+                if (newText.isEmpty()) {
+                    super.replace(fb, offset, length, text, attrs);
+                    return;
+                }
+
+                try {
+                    int value = Integer.parseInt(newText);
+                    if (value <= 59) {
+                        super.replace(fb, offset, length, text, attrs);
+                    }
+                } catch (NumberFormatException e) {
+                    // ถ้าไม่ใช่ตัวเลข เช่นพิมพ์ตัวอักษร จะไม่ทำอะไร
+                }
+            }
+        });
+        // jTextfield29
+        ((AbstractDocument) jTextField29.getDocument()).setDocumentFilter(new DocumentFilter() {
+            @Override
+            public void insertString(FilterBypass fb, int offset, String str, AttributeSet attr) throws BadLocationException {
+                if (str == null) return;
+                checkAndInsert(fb, offset, 0, str, attr);
+            }
+
+            @Override
+            public void replace(FilterBypass fb, int offset, int length, String text, AttributeSet attrs) throws BadLocationException {
+                if (text == null) return;
+                checkAndInsert(fb, offset, length, text, attrs);
+            }
+
+            private void checkAndInsert(FilterBypass fb, int offset, int length, String text, AttributeSet attrs) throws BadLocationException {
+                String oldText = fb.getDocument().getText(0, fb.getDocument().getLength());
+                String newText = new StringBuilder(oldText)
+                        .replace(offset, offset + length, text).toString();
+
+                if (newText.isEmpty()) {
+                    super.replace(fb, offset, length, text, attrs);
+                    return;
+                }
+
+                try {
+                    int value = Integer.parseInt(newText);
+                    if (value <= 31) {
+                        super.replace(fb, offset, length, text, attrs);
+                    }
+                } catch (NumberFormatException e) {
+                    // ถ้าไม่ใช่ตัวเลข เช่นพิมพ์ตัวอักษร จะไม่ทำอะไร
+                }
+            }
+        });
+
 
         jLabel34.setText("Time of treatment (hours-minutes)");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jButton4.setBackground(new java.awt.Color(51, 153, 255));
-        jButton4.setText("Patient data recording");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-
-        jButton5.setBackground(new java.awt.Color(0, 204, 255));
-        jButton5.setText("Search patient information");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-
-        jButton6.setText("Log out");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
 
         jLabel29.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel29.setText("patient personal information");
@@ -303,7 +420,7 @@ public class GUI_Input2_1 extends javax.swing.JFrame {
             }
         });
 
-        jButton9.setBackground(new java.awt.Color(51, 153, 255));
+        jButton9.setBackground(new java.awt.Color(113, 106, 106));
         jButton9.setForeground(new java.awt.Color(255, 255, 255));
         jButton9.setText("back");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -311,8 +428,19 @@ public class GUI_Input2_1 extends javax.swing.JFrame {
                 jButton9ActionPerformed(evt);
             }
         });
+        java.util.List<String> drugs = new ArrayList<>();
+        try (BufferedReader reader = new BufferedReader(new FileReader("./File/Drug.csv"))) {
+            String line;
+            reader.readLine();
+            while ((line = reader.readLine()) != null) {
+                String str[] = line.split(",");
+                drugs.add(str[0]); // ลบช่องว่างหัวท้าย
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tablets", "Liquids", "Injectables"}));
+        jComboBox1 = new JComboBox<>(drugs.toArray(new String[0]));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -324,11 +452,8 @@ public class GUI_Input2_1 extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -424,10 +549,7 @@ public class GUI_Input2_1 extends javax.swing.JFrame {
                             .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton4)
-                            .addComponent(jButton5)
-                            .addComponent(jButton6))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE))
                         .addGap(18, 18, 18)
                         .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -485,18 +607,6 @@ public class GUI_Input2_1 extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        this.dispose();
-        GUI_Searching searchForm = new GUI_Searching();
-        searchForm.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        this.dispose();
-        GUI_Searching searchForm = new GUI_Searching();
-        searchForm.setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         this.dispose();
@@ -651,10 +761,19 @@ public class GUI_Input2_1 extends javax.swing.JFrame {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         if (isAllFieldsFilled()) {
+            CheckInCheckOut checkInCheckOut = new CheckInCheckOut((String) jComboBox7.getSelectedItem()+ ":" + jTextField12.getText() + "/" + jTextField31.getText() + "/" + (String) jComboBox12.getSelectedItem() + "/" + jTextField28.getText()
+                    , (String) jComboBox9.getSelectedItem() + ":" + jTextField27.getText() + "/" + jTextField29.getText() + "/" + (String) jComboBox13.getSelectedItem() + "/" + jTextField30.getText());
+            DiseaseTreatment diseaseTreatment = new DiseaseTreatment(jTextField26.getText(), jTextArea1.getText(), (String) jComboBox6.getSelectedItem(), (String) jComboBox11.getSelectedItem(), jTextField33.getText());
+            DoctorSection doctorSection = new DoctorSection("Dr. John Smith", "Cardiology");
+            // id, docname, sec, patient type, diagnose, treament method, checkin, checkout, weight, high, presure, treatment_rights, drug, tdrug
+            String str;
             JOptionPane.showMessageDialog(this,
                 "Patient data recording completed",
                 "Recording status",
                 JOptionPane.INFORMATION_MESSAGE);
+            this.dispose();
+            GUI_Input2 IN = new GUI_Input2();
+            IN.setVisible(true);
         } else {
             JOptionPane.showMessageDialog(this,
                 "Patient data recording failed",

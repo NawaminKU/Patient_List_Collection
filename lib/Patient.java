@@ -1,6 +1,10 @@
 package lib;
 import lib.PatientComponent.*;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+
 public class Patient {
     private PatientIDCard idCard;
     private PatientName name;
@@ -24,7 +28,6 @@ public class Patient {
         this.location = location;
         this.weakness = weakness;
         this.tell = tell;
-        this.Image = Image;
         checkRep();
     }
 
@@ -102,7 +105,7 @@ public class Patient {
      * Getter for Image
      * @return Image
      */
-    public String getImage() {
-        return Image;
-    }
+//    public String getImage() {
+//        return Image;
+//    }
 }

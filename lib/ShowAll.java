@@ -34,13 +34,4 @@ public class ShowAll {
     public ArrayList<String> getAllData() {
         return patientList;
     }
-    
-//    public static void main(String[] args) {
-//        ShowAll sa = new ShowAll();
-//        sa.loadData();
-//        String str = sa.getAllData().toString();
-//        String str_temp = str.replace("[", "")
-//                .replace("]", "").replace(",", "#");
-//        System.out.println(str_temp);
-//    }
 }

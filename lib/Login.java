@@ -17,10 +17,9 @@ public class Login implements ReadData {
      * @param username ชื่อผู้ใช้ที่จะตรวจสอบ
      * @param password รหัสผ่านที่จะตรวจสอบ
      */
-    public Login(String username, String password, boolean checking) {
+    public Login(String username, String password) {
         this.username = username;
         this.password = password;
-        this.checking = checking;
     }
 
 
@@ -37,7 +36,6 @@ public class Login implements ReadData {
                 String userCheck = data[3], passCheck = data[4];
                 if (id.equals(userCheck) && password.equals(passCheck)) {
                     checking = true;
-                    authenticate(checking);
                 }
             }
         } catch (Exception e) {
@@ -52,7 +50,7 @@ public class Login implements ReadData {
         }
     }
 
-    public boolean authenticate(boolean checkKey) {
-        return checkKey;
+    public boolean authenticate() {
+        return checking;
     }
 }

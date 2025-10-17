@@ -36,9 +36,9 @@ public class Select implements ReadData {
         }
     }
 
-    public static void main(String[] args) {
-        Select sl = new Select();
-        sl.readData("1234567890124");
-        System.out.println(sl.getSelectedPatientID());
-    }
+//    public static void main(String[] args) {
+//        Select sl = new Select();
+//        sl.readData("1234567890124");
+//        System.out.println(sl.getSelectedPatientID());
+//    }
 }
