@@ -1,4 +1,4 @@
-package GUI.src.project_1;
+package project_1;
 
 public class UserName {
     private static String username = null;

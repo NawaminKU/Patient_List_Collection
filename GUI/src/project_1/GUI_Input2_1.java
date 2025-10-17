@@ -4,10 +4,6 @@
  */
 package GUI.src.project_1;
 
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
 import java.io.File;
@@ -15,9 +11,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.lang.classfile.AttributedElement;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.*;
 import javax.swing.text.AbstractDocument;
 import javax.swing.text.AttributeSet;
@@ -27,15 +20,14 @@ import lib.*;
 import lib.TreatmentComponent.CheckInCheckOut;
 import lib.TreatmentComponent.DiseaseTreatment;
 import lib.TreatmentComponent.DoctorSection;
-import lib.TreatmentComponent.Drug;
 
 /**
  *
  * @author ASUS
  */
-public class GUI_Input2_1 extends JFrame {
+public class GUI_Input2_1 extends javax.swing.JFrame {
     
-    private static final Logger logger = Logger.getLogger(GUI_Input2_1.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(GUI_Input2_1.class.getName());
 
     /**
      * Creates new form GUI_Input2_1
@@ -55,43 +47,43 @@ public class GUI_Input2_1 extends JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel34 = new JLabel();
-        jLabel29 = new JLabel();
-        jLabel32 = new JLabel();
-        jComboBox6 = new JComboBox<>();
-        jTextField26 = new JTextField();
-        jLabel33 = new JLabel();
-        jLabel35 = new JLabel();
-        jComboBox7 = new JComboBox<>();
-        jTextField12 = new JTextField();
-        jLabel36 = new JLabel();
-        jComboBox9 = new JComboBox<>();
-        jTextField27 = new JTextField();
-        jLabel37 = new JLabel();
-        jTextField31 = new JTextField();
-        jComboBox12 = new JComboBox<>();
-        jTextField28 = new JTextField();
-        jLabel38 = new JLabel();
-        jTextField29 = new JTextField();
-        jComboBox13 = new JComboBox<>();
-        jTextField30 = new JTextField();
-        jLabel39 = new JLabel();
-        jLabel40 = new JLabel();
-        jLabel41 = new JLabel();
-        jLabel42 = new JLabel();
-        jTextField32 = new JTextField();
-        jTextField34 = new JTextField();
-        jTextField33 = new JTextField();
-        jLabel43 = new JLabel();
-        jComboBox11 = new JComboBox<>();
-        jLabel44 = new JLabel();
-        jLabel46 = new JLabel();
-        jScrollPane1 = new JScrollPane();
-        jTextArea1 = new JTextArea();
-        jButton7 = new JButton();
-        jButton8 = new JButton();
-        jButton9 = new JButton();
-        jComboBox1 = new JComboBox<>();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jComboBox6 = new javax.swing.JComboBox<>();
+        jTextField26 = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jComboBox7 = new javax.swing.JComboBox<>();
+        jTextField12 = new javax.swing.JTextField();
+        jLabel36 = new javax.swing.JLabel();
+        jComboBox9 = new javax.swing.JComboBox<>();
+        jTextField27 = new javax.swing.JTextField();
+        jLabel37 = new javax.swing.JLabel();
+        jTextField31 = new javax.swing.JTextField();
+        jComboBox12 = new javax.swing.JComboBox<>();
+        jTextField28 = new javax.swing.JTextField();
+        jLabel38 = new javax.swing.JLabel();
+        jTextField29 = new javax.swing.JTextField();
+        jComboBox13 = new javax.swing.JComboBox<>();
+        jTextField30 = new javax.swing.JTextField();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jTextField32 = new javax.swing.JTextField();
+        jTextField34 = new javax.swing.JTextField();
+        jTextField33 = new javax.swing.JTextField();
+        jLabel43 = new javax.swing.JLabel();
+        jComboBox11 = new javax.swing.JComboBox<>();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         // jTextField12
         ((AbstractDocument) jTextField12.getDocument()).setDocumentFilter(new DocumentFilter() {
@@ -233,17 +225,17 @@ public class GUI_Input2_1 extends JFrame {
 
         jLabel34.setText("Time of treatment (hours-minutes)");
 
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel29.setFont(new Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel29.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel29.setText("patient personal information");
 
         jLabel32.setText("Patient type");
 
-        jComboBox6.setModel(new DefaultComboBoxModel<>(new String[] { "Severe", "Intermediate", "Light" }));
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Severe", "Intermediate", "Light" }));
 
-        jTextField26.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+        jTextField26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField26ActionPerformed(evt);
             }
         });
@@ -252,102 +244,102 @@ public class GUI_Input2_1 extends JFrame {
 
         jLabel35.setText("Time of treatment (hours-minutes)");
 
-        jComboBox7.setModel(new DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4" ,"5", "6", "7","8", "9", "10","11", "12","13", "14", "15", "16" ,"17", "18", "19","20", "21", "22","23", "24"}));
-        jComboBox7.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4" ,"5", "6", "7","8", "9", "10","11", "12","13", "14", "15", "16" ,"17", "18", "19","20", "21", "22","23", "24"}));
+        jComboBox7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox7ActionPerformed(evt);
             }
         });
 
-        jTextField12.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+        jTextField12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField12ActionPerformed(evt);
             }
         });
-        jTextField12.addKeyListener(new KeyAdapter() {
-            public void keyTyped(KeyEvent evt) {
+        jTextField12.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField12KeyTyped(evt);
             }
         });
 
         jLabel36.setText("Treatment time (hours-minutes)");
 
-        jComboBox9.setModel(new DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4" ,"5", "6", "7","8", "9", "10","11", "12","13", "14", "15", "16" ,"17", "18", "19","20", "21", "22","23", "24"}));
-        jComboBox9.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4" ,"5", "6", "7","8", "9", "10","11", "12","13", "14", "15", "16" ,"17", "18", "19","20", "21", "22","23", "24"}));
+        jComboBox9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox9ActionPerformed(evt);
             }
         });
 
-        jTextField27.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+        jTextField27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField27ActionPerformed(evt);
             }
         });
-        jTextField27.addKeyListener(new KeyAdapter() {
-            public void keyTyped(KeyEvent evt) {
+        jTextField27.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField27KeyTyped(evt);
             }
         });
 
         jLabel37.setText("D/M/Y Time of treatmen");
 
-        jTextField31.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+        jTextField31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField31ActionPerformed(evt);
             }
         });
-        jTextField31.addKeyListener(new KeyAdapter() {
-            public void keyTyped(KeyEvent evt) {
+        jTextField31.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField31KeyTyped(evt);
             }
         });
 
-        jComboBox12.setModel(new DefaultComboBoxModel<>(new String[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
-        jComboBox12.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+        jComboBox12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
+        jComboBox12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox12ActionPerformed(evt);
             }
         });
 
-        jTextField28.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+        jTextField28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField28ActionPerformed(evt);
             }
         });
-        jTextField28.addKeyListener(new KeyAdapter() {
-            public void keyTyped(KeyEvent evt) {
+        jTextField28.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField28KeyTyped(evt);
             }
         });
 
         jLabel38.setText("D/M/Y Treatment time");
 
-        jTextField29.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+        jTextField29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField29ActionPerformed(evt);
             }
         });
-        jTextField29.addKeyListener(new KeyAdapter() {
-            public void keyTyped(KeyEvent evt) {
+        jTextField29.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField29KeyTyped(evt);
             }
         });
 
-        jComboBox13.setModel(new DefaultComboBoxModel<>(new String[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
-        jComboBox13.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
+        jComboBox13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox13ActionPerformed(evt);
             }
         });
 
-        jTextField30.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+        jTextField30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField30ActionPerformed(evt);
             }
         });
-        jTextField30.addKeyListener(new KeyAdapter() {
-            public void keyTyped(KeyEvent evt) {
+        jTextField30.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField30KeyTyped(evt);
             }
         });
@@ -360,44 +352,44 @@ public class GUI_Input2_1 extends JFrame {
 
         jLabel42.setText("pressure");
 
-        jTextField32.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+        jTextField32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField32ActionPerformed(evt);
             }
         });
-        jTextField32.addKeyListener(new KeyAdapter() {
-            public void keyTyped(KeyEvent evt) {
+        jTextField32.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField32KeyTyped(evt);
             }
         });
 
-        jTextField34.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+        jTextField34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField34ActionPerformed(evt);
             }
         });
-        jTextField34.addKeyListener(new KeyAdapter() {
-            public void keyTyped(KeyEvent evt) {
+        jTextField34.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField34KeyTyped(evt);
             }
         });
 
-        jTextField33.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+        jTextField33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField33ActionPerformed(evt);
             }
         });
-        jTextField33.addKeyListener(new KeyAdapter() {
-            public void keyTyped(KeyEvent evt) {
+        jTextField33.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField33KeyTyped(evt);
             }
         });
 
         jLabel43.setText("Use treatment rights");
 
-        jComboBox11.setModel(new DefaultComboBoxModel<>(new String[] { "National Health Security Rights", "Social Security rights", "Civil servant rights"}));
-        jComboBox11.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+        jComboBox11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "National Health Security Rights", "Social Security rights", "Civil servant rights"}));
+        jComboBox11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox11ActionPerformed(evt);
             }
         });
@@ -410,33 +402,33 @@ public class GUI_Input2_1 extends JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jButton7.setBackground(new Color(51, 153, 0));
-        jButton7.setForeground(new Color(255, 255, 255));
+        jButton7.setBackground(new java.awt.Color(51, 153, 0));
+        jButton7.setForeground(new java.awt.Color(255, 255, 255));
         jButton7.setText("Reset");
-        jButton7.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
 
-        jButton8.setBackground(new Color(0, 153, 255));
-        jButton8.setForeground(new Color(255, 255, 255));
+        jButton8.setBackground(new java.awt.Color(0, 153, 255));
+        jButton8.setForeground(new java.awt.Color(255, 255, 255));
         jButton8.setText("Record data");
-        jButton8.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
             }
         });
 
-        jButton9.setBackground(new Color(113, 106, 106));
-        jButton9.setForeground(new Color(255, 255, 255));
+        jButton9.setBackground(new java.awt.Color(113, 106, 106));
+        jButton9.setForeground(new java.awt.Color(255, 255, 255));
         jButton9.setText("back");
-        jButton9.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
             }
         });
-        List<String> drugs = new ArrayList<>();
+        java.util.List<String> drugs = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader("./File/Drug.csv"))) {
             String line;
             reader.readLine();
@@ -449,161 +441,161 @@ public class GUI_Input2_1 extends JFrame {
         }
 
         jComboBox1 = new JComboBox<>(drugs.toArray(new String[0]));
-        jComboBox1.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
 
-        GroupLayout layout = new GroupLayout(getContentPane());
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(60, 60, 60)
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton9, GroupLayout.PREFERRED_SIZE, 111, GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton7, GroupLayout.PREFERRED_SIZE, 111, GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton8, GroupLayout.PREFERRED_SIZE, 111, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(58, 58, 58))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel29, GroupLayout.PREFERRED_SIZE, 174, GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel35, GroupLayout.PREFERRED_SIZE, 185, GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jComboBox7, GroupLayout.PREFERRED_SIZE, 83, GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField12, GroupLayout.PREFERRED_SIZE, 81, GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel37, GroupLayout.PREFERRED_SIZE, 131, GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jTextField31, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox12, GroupLayout.PREFERRED_SIZE, 104, GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField28, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jComboBox12, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel36, GroupLayout.PREFERRED_SIZE, 171, GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jComboBox9, GroupLayout.PREFERRED_SIZE, 83, GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField27, GroupLayout.PREFERRED_SIZE, 81, GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jTextField29, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(8, 8, 8)
-                                        .addComponent(jComboBox13, GroupLayout.PREFERRED_SIZE, 104, GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField30, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel38, GroupLayout.PREFERRED_SIZE, 121, GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel33, GroupLayout.PREFERRED_SIZE, 63, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                                    .addComponent(jComboBox11, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel43))
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel44)
-                                    .addComponent(jComboBox1, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jTextField26, GroupLayout.PREFERRED_SIZE, 504, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 957, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel46, GroupLayout.PREFERRED_SIZE, 105, GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 957, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                                    .addComponent(jComboBox6, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel32))
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jTextField32, GroupLayout.PREFERRED_SIZE, 46, GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField32, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel40)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField34, GroupLayout.PREFERRED_SIZE, 46, GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel41, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField34, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel39))
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel42)
-                                    .addComponent(jTextField33, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jTextField33, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addContainerGap(123, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel36)
                             .addComponent(jLabel38))
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                            .addComponent(jComboBox9, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField27, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox13, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField30, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField29, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel29, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel32, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel39)
-                            .addComponent(jLabel42, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBox6, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                .addComponent(jTextField32, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jTextField32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel40)
-                                .addComponent(jTextField34, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel41)
-                                .addComponent(jTextField33, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jTextField33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel35)
-                            .addComponent(jLabel37, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                            .addComponent(jComboBox7, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField12, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField31, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox12, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField28, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel33)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField26, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel46, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 157, GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel43)
                     .addComponent(jLabel44))
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox11, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton7, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton8)
                     .addComponent(jButton9))
                 .addContainerGap(51, Short.MAX_VALUE))
@@ -612,96 +604,96 @@ public class GUI_Input2_1 extends JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jButton6ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         this.dispose();
         Login1 login = new Login1();
         login.setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
 
-    private void jTextField26ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jTextField26ActionPerformed
+    private void jTextField26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField26ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField26ActionPerformed
 
-    private void jComboBox7ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jComboBox7ActionPerformed
+    private void jComboBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox7ActionPerformed
 
-    private void jTextField12ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField12ActionPerformed
 
-    private void jTextField12KeyTyped(KeyEvent evt) {//GEN-FIRST:event_jTextField12KeyTyped
+    private void jTextField12KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField12KeyTyped
         char c = evt.getKeyChar();
         if(!Character.isDigit(c)){
             evt.consume();
         }
     }//GEN-LAST:event_jTextField12KeyTyped
 
-    private void jTextField27ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jTextField27ActionPerformed
+    private void jTextField27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField27ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField27ActionPerformed
 
-    private void jTextField27KeyTyped(KeyEvent evt) {//GEN-FIRST:event_jTextField27KeyTyped
+    private void jTextField27KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField27KeyTyped
         char c = evt.getKeyChar();
         if(!Character.isDigit(c)){
             evt.consume();
         }
     }//GEN-LAST:event_jTextField27KeyTyped
 
-    private void jComboBox9ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jComboBox9ActionPerformed
+    private void jComboBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox9ActionPerformed
 
-    private void jTextField31ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jTextField31ActionPerformed
+    private void jTextField31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField31ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField31ActionPerformed
 
-    private void jTextField31KeyTyped(KeyEvent evt) {//GEN-FIRST:event_jTextField31KeyTyped
+    private void jTextField31KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField31KeyTyped
         char c = evt.getKeyChar();
         if(!Character.isDigit(c)){
             evt.consume();
         }
     }//GEN-LAST:event_jTextField31KeyTyped
 
-    private void jComboBox12ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jComboBox12ActionPerformed
+    private void jComboBox12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox12ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox12ActionPerformed
 
-    private void jTextField28ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jTextField28ActionPerformed
+    private void jTextField28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField28ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField28ActionPerformed
 
-    private void jTextField28KeyTyped(KeyEvent evt) {//GEN-FIRST:event_jTextField28KeyTyped
+    private void jTextField28KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField28KeyTyped
         char c = evt.getKeyChar();
         if(!Character.isDigit(c)){
             evt.consume();
         }
     }//GEN-LAST:event_jTextField28KeyTyped
 
-    private void jComboBox13ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jComboBox13ActionPerformed
+    private void jComboBox13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox13ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox13ActionPerformed
 
-    private void jTextField30ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jTextField30ActionPerformed
+    private void jTextField30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField30ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField30ActionPerformed
 
-    private void jTextField30KeyTyped(KeyEvent evt) {//GEN-FIRST:event_jTextField30KeyTyped
+    private void jTextField30KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField30KeyTyped
         char c = evt.getKeyChar();
         if(!Character.isDigit(c)){
             evt.consume();
         }
     }//GEN-LAST:event_jTextField30KeyTyped
 
-    private void jTextField32ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jTextField32ActionPerformed
+    private void jTextField32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField32ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField32ActionPerformed
 
-    private void jTextField32KeyTyped(KeyEvent evt) {//GEN-FIRST:event_jTextField32KeyTyped
+    private void jTextField32KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField32KeyTyped
         char c = evt.getKeyChar();
         if(!(Character.isDigit(c)) && c!=KeyEvent.VK_PERIOD){
             getToolkit().beep();
@@ -712,11 +704,11 @@ public class GUI_Input2_1 extends JFrame {
         }
     }//GEN-LAST:event_jTextField32KeyTyped
 
-    private void jTextField34ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jTextField34ActionPerformed
+    private void jTextField34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField34ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField34ActionPerformed
 
-    private void jTextField34KeyTyped(KeyEvent evt) {//GEN-FIRST:event_jTextField34KeyTyped
+    private void jTextField34KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField34KeyTyped
         char c = evt.getKeyChar();
         if(!(Character.isDigit(c)) && c!=KeyEvent.VK_PERIOD){
             getToolkit().beep();
@@ -727,11 +719,11 @@ public class GUI_Input2_1 extends JFrame {
         }
     }//GEN-LAST:event_jTextField34KeyTyped
 
-    private void jTextField33ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jTextField33ActionPerformed
+    private void jTextField33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField33ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField33ActionPerformed
 
-    private void jTextField33KeyTyped(KeyEvent evt) {//GEN-FIRST:event_jTextField33KeyTyped
+    private void jTextField33KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField33KeyTyped
         char c = evt.getKeyChar();
         if(!(Character.isDigit(c)) && c!=KeyEvent.VK_PERIOD){
             getToolkit().beep();
@@ -742,11 +734,11 @@ public class GUI_Input2_1 extends JFrame {
         }
     }//GEN-LAST:event_jTextField33KeyTyped
 
-    private void jComboBox11ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jComboBox11ActionPerformed
+    private void jComboBox11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox11ActionPerformed
 
     }//GEN-LAST:event_jComboBox11ActionPerformed
 
-    private void jButton7ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         jTextArea1.setText("");
         jTextField12.setText("");
         jTextField26.setText("");
@@ -767,61 +759,14 @@ public class GUI_Input2_1 extends JFrame {
         jComboBox1.setSelectedIndex(0);
     }//GEN-LAST:event_jButton7ActionPerformed
 
-    private void jButton8ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         if (isAllFieldsFilled()) {
-            String fullName = "", section = "", typeDrug = "", id = "";
             CheckInCheckOut checkInCheckOut = new CheckInCheckOut((String) jComboBox7.getSelectedItem()+ ":" + jTextField12.getText() + "/" + jTextField31.getText() + "/" + (String) jComboBox12.getSelectedItem() + "/" + jTextField28.getText()
                     , (String) jComboBox9.getSelectedItem() + ":" + jTextField27.getText() + "/" + jTextField29.getText() + "/" + (String) jComboBox13.getSelectedItem() + "/" + jTextField30.getText());
-            DiseaseTreatment diseaseTreatment = new DiseaseTreatment(jTextField26.getText(), jTextArea1.getText(), (String) jComboBox6.getSelectedItem(), (String) jComboBox11.getSelectedItem(),
-                    jTextField33.getText(), jTextField32.getText(), jLabel34.getText());
-            UserName userName = new UserName();
-            DoctorSection doctorSection;
-            try {
-                File f = new File("./File/Doctor.csv");
-                FileReader fr = new FileReader(f);
-                BufferedReader br = new BufferedReader(fr);
-                String line;
-                br.readLine();
-                while ((line = br.readLine()) != null) {
-                    String str[] = line.split(",");
-                    if (userName.getUsername().equals(str[3])) {
-                        fullName = str[0] + str[1] + " " + str[2];
-                        section = str[5];
-                    }
-                }
-            doctorSection = new DoctorSection(fullName, section);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-
-            try {
-                File f = new File("./File/Drug.csv");
-                FileReader fr = new FileReader(f);
-                BufferedReader br = new BufferedReader(fr);
-                String line;
-                String drugName = (String) jComboBox1.getSelectedItem();
-                br.readLine();
-                while ((line = br.readLine()) != null) {
-                    String str[] = line.split(",");
-                    if (drugName.equals(str[0])) {
-                        typeDrug = str[1];
-                    }
-                }
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-            Drug drug = new Drug((String) jComboBox1.getSelectedItem(), typeDrug);
-            Treament treament = new Treament(checkInCheckOut, doctorSection, diseaseTreatment, drug);
-            ID_Patient id_patient = new ID_Patient();
-            id = id_patient.getId_Card();
+            DiseaseTreatment diseaseTreatment = new DiseaseTreatment(jTextField26.getText(), jTextArea1.getText(), (String) jComboBox6.getSelectedItem(), (String) jComboBox11.getSelectedItem(), jTextField33.getText());
+            DoctorSection doctorSection = new DoctorSection("Dr. John Smith", "Cardiology");
             // id, docname, sec, patient type, diagnose, treament method, checkin, checkout, weight, high, presure, treatment_rights, drug, tdrug
-            String insert = id + "," + treament.getDoctorSection().getDoctor() + "," + treament.getDoctorSection().getSection() + ","
-                    + treament.getDiseaseTreatment().getDisease() + "," + treament.getDiseaseTreatment().getMedicalTreatment() + ","
-                    + treament.getCheckInCheckOut().getCheckIn() + "," + treament.getCheckInCheckOut().getCheckOut() + ","
-                    + treament.getDiseaseTreatment().getWeight() + "," + treament.getDiseaseTreatment().getHigh() + "," + treament.getDiseaseTreatment().getRights()
-                    + "," + treament.getDrugs().getDrugNames() + "," + treament.getDrugs().getTypeDrug();
-            ReadWriteTreatmentData treatmentData = new ReadWriteTreatmentData();
-            treatmentData.writeData(insert);
+            String str;
             JOptionPane.showMessageDialog(this,
                 "Patient data recording completed",
                 "Recording status",
@@ -837,24 +782,24 @@ public class GUI_Input2_1 extends JFrame {
         }
     }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void jButton9ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
           this.dispose();
           GUI_Input2 searchForm = new GUI_Input2();
           searchForm.setVisible(true);
     }//GEN-LAST:event_jButton9ActionPerformed
 
-    private void jTextField29KeyTyped(KeyEvent evt) {//GEN-FIRST:event_jTextField29KeyTyped
+    private void jTextField29KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField29KeyTyped
         char c = evt.getKeyChar();
         if(!Character.isDigit(c)){
             evt.consume();
         }
     }//GEN-LAST:event_jTextField29KeyTyped
 
-    private void jTextField29ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jTextField29ActionPerformed
+    private void jTextField29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField29ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField29ActionPerformed
 
-    private void jComboBox1ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
@@ -868,19 +813,19 @@ public class GUI_Input2_1 extends JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
-                    UIManager.setLookAndFeel(info.getClassName());
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch (ReflectiveOperationException | UnsupportedLookAndFeelException ex) {
-            logger.log(Level.SEVERE, null, ex);
+        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
+            logger.log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
-        EventQueue.invokeLater(() -> new GUI_Input2_1().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new GUI_Input2_1().setVisible(true));
     }
   private boolean isAllFieldsFilled() {
  
@@ -905,47 +850,47 @@ public class GUI_Input2_1 extends JFrame {
     return true;
 }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private JButton jButton3;
-    private JButton jButton4;
-    private JButton jButton5;
-    private JButton jButton6;
-    private JButton jButton7;
-    private JButton jButton8;
-    private JButton jButton9;
-    private JComboBox<String> jComboBox1;
-    private JComboBox<String> jComboBox11;
-    private JComboBox<String> jComboBox12;
-    private JComboBox<String> jComboBox13;
-    private JComboBox<String> jComboBox6;
-    private JComboBox<String> jComboBox7;
-    private JComboBox<String> jComboBox9;
-    private JLabel jLabel29;
-    private JLabel jLabel32;
-    private JLabel jLabel33;
-    private JLabel jLabel34;
-    private JLabel jLabel35;
-    private JLabel jLabel36;
-    private JLabel jLabel37;
-    private JLabel jLabel38;
-    private JLabel jLabel39;
-    private JLabel jLabel40;
-    private JLabel jLabel41;
-    private JLabel jLabel42;
-    private JLabel jLabel43;
-    private JLabel jLabel44;
-    private JLabel jLabel46;
-    private JScrollPane jScrollPane1;
-    private JTextArea jTextArea1;
-    private JTextField jTextField12;
-    private JTextField jTextField26;
-    private JTextField jTextField27;
-    private JTextField jTextField28;
-    private JTextField jTextField29;
-    private JTextField jTextField30;
-    private JTextField jTextField31;
-    private JTextField jTextField32;
-    private JTextField jTextField33;
-    private JTextField jTextField34;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox11;
+    private javax.swing.JComboBox<String> jComboBox12;
+    private javax.swing.JComboBox<String> jComboBox13;
+    private javax.swing.JComboBox<String> jComboBox6;
+    private javax.swing.JComboBox<String> jComboBox7;
+    private javax.swing.JComboBox<String> jComboBox9;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField26;
+    private javax.swing.JTextField jTextField27;
+    private javax.swing.JTextField jTextField28;
+    private javax.swing.JTextField jTextField29;
+    private javax.swing.JTextField jTextField30;
+    private javax.swing.JTextField jTextField31;
+    private javax.swing.JTextField jTextField32;
+    private javax.swing.JTextField jTextField33;
+    private javax.swing.JTextField jTextField34;
     // End of variables declaration//GEN-END:variables
 
 }

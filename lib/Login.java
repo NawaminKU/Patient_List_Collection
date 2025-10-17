@@ -26,7 +26,7 @@ public class Login implements ReadData {
     @Override
     public void readData(String id) {
         try {
-            f = new File("./File/Doctor.csv");
+            f = new File("../File/Doctor.csv");
             fr = new FileReader(f);
             br = new BufferedReader(fr);
             String line;

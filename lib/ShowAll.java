@@ -34,4 +34,5 @@ public class ShowAll {
     public ArrayList<String> getAllData() {
         return patientList;
     }
+    
 }

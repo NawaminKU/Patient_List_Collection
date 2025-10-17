@@ -15,7 +15,7 @@ public class ReadWriteTreatmentData implements ReadData, WriteData {
     @Override
     public void writeData(String data) {
         try {
-            file = new File("./File/Hospital(Treatment).csv");
+            file = new File("./File/treatment.txt");
             fw = new FileWriter(file, true);
             bw = new BufferedWriter(fw);
             bw.write(data);
@@ -62,20 +62,5 @@ public class ReadWriteTreatmentData implements ReadData, WriteData {
             }
         }
     }
-//    public static void main(String[] args) {
-//        CheckInCheckOut checkInCheckOut = new CheckInCheckOut("2023-10-01", "2023-10-10");
-//        DoctorSection doctorSection = new DoctorSection("Dr. Smith", "Cardiology");
-//        DiseaseTreatment diseaseTreatment = new DiseaseTreatment("Hypertension", "Low sodium diet", "d", "d", "d");
-//        Drug drug = new Drug(new ArrayList<>(List.of("Lisinopril")), new ArrayList<>(List.of("10mg")));
-//        Treament treatment = new Treament(
-//            checkInCheckOut,
-//            doctorSection,
-//            diseaseTreatment,
-//            drug
-//        );
-//
-//        ReadWriteTreatmentData rwt = new ReadWriteTreatmentData();
-//        // rwt.writeData("1234567, " + treatment.getCheckInCheckOut().getCheckIn() + ", " + treatment.getDoctorSection().getDoctor() + ", " + treatment.getDiseaseTreatment().getDisease() + ", " + treatment.getDrugs().getDrugNames());
-//        rwt.readData("123456");
-}
 
+}

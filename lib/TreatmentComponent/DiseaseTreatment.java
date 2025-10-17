@@ -6,18 +6,13 @@ public class DiseaseTreatment {
     private String tPatient;
     private String rights;
     private String pressure;
-    private String weight;
-    private String high;
 
-    public DiseaseTreatment(String disease, String medicalTreatment, String tPatient, String rights, String pressure,
-                            String weight, String high) {
+    public DiseaseTreatment(String disease, String medicalTreatment, String tPatient, String rights, String pressure) {
         this.disease = disease;
         this.medicalTreatment = medicalTreatment;
         this.tPatient = tPatient;
         this.rights = rights;
         this.pressure = pressure;
-        this.weight = weight;
-        this.high = high;
         checkRep();
     }
     private void checkRep() {
@@ -36,9 +31,6 @@ public class DiseaseTreatment {
         if (pressure == null) {
             throw new RuntimeException("pressure is null");
         }
-        if (weight == null || high == null) {
-            throw new RuntimeException("weight or high is null");
-        }
     }
     public String getDisease() {
         return disease;
@@ -54,11 +46,5 @@ public class DiseaseTreatment {
     }
     public String getPressure() {
         return pressure;
-    }
-    public String getWeight() {
-        return weight;
-    }
-    public String getHigh() {
-        return high;
     }
 }

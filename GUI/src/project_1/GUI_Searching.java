@@ -1,16 +1,21 @@
 package GUI.src.project_1;
 
+import javax.annotation.processing.Filer;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
+import javax.imageio.stream.ImageInputStream;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.*;
 import java.util.ArrayList;
 import lib.*;
 
@@ -202,7 +207,7 @@ public class GUI_Searching extends javax.swing.JFrame {
         jButton48 = new JButton();
         editData = new JButton();
         jLabel3.setText("Last name");
-
+        
         jPanel4.add(jLabel48);
 
         JButton browseButton = new JButton("Browse");
@@ -212,10 +217,10 @@ public class GUI_Searching extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent e) {
                 JFileChooser fileChooser = new JFileChooser();
                 int result = fileChooser.showOpenDialog(GUI_Searching.this);
-//                    if (result == JFileChooser.APPROVE_OPTION) {
-//                        selectedFile = fileChooser.getSelectedFile();
-//                        filePathField.setText(selectedFile.getAbsolutePath());
-//                    }
+                if (result == JFileChooser.APPROVE_OPTION) {
+                    selectedFile = fileChooser.getSelectedFile();
+                    jTextField11.setText(selectedFile.getAbsolutePath());
+                }
             }
         });
         editData.setFont(new Font("Segoe UI", 1, 12));
@@ -243,6 +248,7 @@ public class GUI_Searching extends javax.swing.JFrame {
                     jTextField14.setEditable(true);
                     jTextField15.setEditable(true);
                     editData.setText("save");
+                    
                     isEditing = true;
                 } else {
                     jPanel4.remove(browseButton);
@@ -263,11 +269,13 @@ public class GUI_Searching extends javax.swing.JFrame {
                     jTextField14.setEditable(false);
                     jTextField15.setEditable(false);
                     javax.swing.JOptionPane.showMessageDialog(jPanel5,
-                            "Complete",
-                            "sucess to save",
-                            JOptionPane.INFORMATION_MESSAGE);
+                    "Complete",
+                    "sucess to save",
+                    JOptionPane.INFORMATION_MESSAGE);
                     editData.setText("edit");
                     isEditing = false;
+                    ReadWritePatientData readWritePatientData = new ReadWritePatientData();
+                    readWritePatientData.editData(getWarningString(), getName());
                 }
             }
         });
@@ -423,7 +431,25 @@ public class GUI_Searching extends javax.swing.JFrame {
         jPanel8Layout.setAutoCreateContainerGaps(true);
 
 // สร้างปุ่มหลายตัวแบบ array
-        int buttonCount = 30;
+// เพื่อหาจำนวนคนไข้
+
+        int buttonCount = 0;
+        String temp = null;
+        File f = new File("../File/Hospital(Patient).csv");
+        try {
+            FileReader fr = new FileReader(f);
+            BufferedReader br = new BufferedReader(fr);
+            String line;
+            br.readLine();
+            while ((line = br.readLine()) != null) {
+                buttonCount++;
+                temp += line;
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        temp.replace("null", "");
+        String arr[] = temp.split(",");
         JButton[] idButtons = new JButton[buttonCount];
 
 // สร้าง horizontal และ vertical group
@@ -431,8 +457,9 @@ public class GUI_Searching extends javax.swing.JFrame {
         GroupLayout.SequentialGroup vGroup2 = jPanel8Layout.createSequentialGroup().addGap(10);
         GroupLayout.ParallelGroup hParallel2 = jPanel8Layout.createParallelGroup(GroupLayout.Alignment.LEADING);
 
+        int k = 0;
         for (int i = 0; i < buttonCount; i++) {
-            idButtons[i] = new JButton("ID card " + (i + 1) + "     Title First Name Lastname");
+            idButtons[i] = new JButton(arr[4+k] + "     " + arr[0+k] + arr[1+k] + " " + arr[2+k]);
             idButtons[i].setFont(new Font("Segoe UI", Font.BOLD, 12));
             idButtons[i].setBackground(new Color(0, 153, 204));
             idButtons[i].setForeground(Color.WHITE);
@@ -442,8 +469,35 @@ public class GUI_Searching extends javax.swing.JFrame {
             final int index = i;
             idButtons[i].addActionListener(evt -> {
                 JOptionPane.showMessageDialog(jPanel8, "Clicked: " + idButtons[index].getText());
+                
+                File ff = new File("../File/Hospital(Patient).csv");
+                try {
+                    FileReader fr = new FileReader(ff);
+                    BufferedReader br = new BufferedReader(fr);
+                    String line;
+                    br.readLine();
+                    while ((line = br.readLine()) != null) {
+                        String str[] = line.split(",");
+                        if (idButtons[index].getText().contains(str[4])) {
+                            jTextField4.setText(str[0]);
+                            jTextField6.setText(str[1]);
+                            jTextField7.setText(str[2]);
+                            jTextField5.setText(str[13]);
+                            jTextField8.setText(str[8]);
+                            jTextField9.setText(str[9]);
+                            jTextField10.setText("-");
+                            jTextField11.setText("-");
+                            jTextField12.setText(str[10]);
+                            jTextField13.setText(str[11]);
+                            jTextField14.setText(str[18]);
+                            jTextField15.setText(str[7]);
+                        }
+                    }
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
             });
-
+            k += 21;
             // เพิ่มเข้า layout
             hParallel2.addComponent(idButtons[i], GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE);
             vGroup2.addComponent(idButtons[i], GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE)
@@ -515,7 +569,6 @@ public class GUI_Searching extends javax.swing.JFrame {
 
         jLabel7.setText("Name :");
 
-        jTextField4.setText("Title");
         jTextField4.setEditable(false);
         jTextField4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -523,7 +576,6 @@ public class GUI_Searching extends javax.swing.JFrame {
             }
         });
 
-        jTextField6.setText("First Name");
         jTextField6.setEditable(false);
         jTextField6.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -531,14 +583,12 @@ public class GUI_Searching extends javax.swing.JFrame {
             }
         });
 
-        jTextField7.setText("Last name");
         jTextField7.setEditable(false);
 
         jLabel8.setText("Last name :");
 
         jLabel9.setText("Call number Patient :");
 
-        jTextField5.setText("");
         jTextField5.setEditable(false);
         jTextField5.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -559,7 +609,6 @@ public class GUI_Searching extends javax.swing.JFrame {
 
         jLabel11.setText("address :");
 
-        jTextField8.setText("House No.");
         jTextField8.setEditable(false);
         jTextField8.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -567,7 +616,6 @@ public class GUI_Searching extends javax.swing.JFrame {
             }
         });
 
-        jTextField9.setText("Village No.");
         jTextField9.setEditable(false);
         jTextField9.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -575,7 +623,6 @@ public class GUI_Searching extends javax.swing.JFrame {
             }
         });
 
-        jTextField10.setText("Road");
         jTextField10.setEditable(false);
         jTextField10.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -583,7 +630,6 @@ public class GUI_Searching extends javax.swing.JFrame {
             }
         });
 
-        jTextField11.setText("Sub-district");
         jTextField11.setEditable(false);
         jTextField11.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -591,7 +637,6 @@ public class GUI_Searching extends javax.swing.JFrame {
             }
         });
 
-        jTextField12.setText("District");
         jTextField12.setEditable(false);
         jTextField12.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -599,7 +644,6 @@ public class GUI_Searching extends javax.swing.JFrame {
             }
         });
 
-        jTextField13.setText("Province");
         jTextField13.setEditable(false);
         jTextField13.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -611,7 +655,6 @@ public class GUI_Searching extends javax.swing.JFrame {
 
         jLabel13.setText("Chronic disease :");
 
-        jTextField14.setText("Chronic disease ");
         jTextField14.setEditable(false);
         jTextField14.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -628,7 +671,6 @@ public class GUI_Searching extends javax.swing.JFrame {
             }
         });
 
-        jTextField15.setText("Chronic disease ");
         jTextField15.setEditable(false);
         jTextField15.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -797,7 +839,23 @@ public class GUI_Searching extends javax.swing.JFrame {
 
         GroupLayout jPanel12Layout = new GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
-        int panelCount = 30;
+        String idString = null;
+        int panelCount = 0;
+        File file = new File("../File/Hospital(Treatment).csv");
+        try {
+            FileReader fr = new FileReader(file);
+            BufferedReader br = new BufferedReader(fr);
+            String line;
+            br.readLine();
+            while ((line = br.readLine()) != null) {
+                String str[] = line.split(",");
+                if (idString.equals(str[0])) {
+                    panelCount++;
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
         ArrayList<JPanel> panels = new ArrayList<>();
 
         // สร้าง panels จาก template
@@ -1592,5 +1650,6 @@ public class GUI_Searching extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JButton editData;
+    private File selectedFile;
     // End of variables declaration//GEN-END:variables
 }

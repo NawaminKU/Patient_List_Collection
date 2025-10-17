@@ -4,6 +4,7 @@
  */
 package GUI.src.project_1;
 import lib.Login;
+import project_1.UserName;
 
 import java.awt.event.ActionEvent;
 
@@ -17,6 +18,7 @@ public class Login1 extends javax.swing.JFrame {
      */
     public Login1() {
         initComponents();
+        getUser();
         setResizable(false);
         setLocationRelativeTo(null);
        
@@ -74,8 +76,8 @@ jTextField2.addKeyListener(new java.awt.event.KeyAdapter() { //User Font Only
         jPanel1.setForeground(new java.awt.Color(60, 63, 65));
         jPanel1.setToolTipText("");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("../Image/LOGO PROject.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        //jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("src/Image/OK.jpg"))); // NOI18N
+        jLabel1.setText(".");
         jLabel1.setPreferredSize(new java.awt.Dimension(493, 500));
         jLabel1.setRequestFocusEnabled(false);
 
@@ -179,11 +181,11 @@ jTextField2.addKeyListener(new java.awt.event.KeyAdapter() { //User Font Only
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String username = jTextField2.getText();
         String password = new String(jPasswordField1.getPassword());  // ✅ ใช้ getPassword() แทน
+        UserName user = new UserName();
+        user.setUsername(jTextField2.getText());
         log = new Login(username, password);
         log.readData(username); // ตรวจสอบข้อมูล
         if (log.authenticate()) {
-            UserName userName = new UserName();
-            userName.setUsername(jTextField2.getText());
         this.dispose();
         new GUI_Searching().setVisible(true);
         } else {
@@ -225,6 +227,10 @@ jTextField2.addKeyListener(new java.awt.event.KeyAdapter() { //User Font Only
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new Login1().setVisible(true));
+    }
+
+    public String getUser() {
+        return jLabel2.getText();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
