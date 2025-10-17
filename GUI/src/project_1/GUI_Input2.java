@@ -759,6 +759,8 @@ public class GUI_Input2 extends javax.swing.JFrame {
             PatientWeakness weakness = new PatientWeakness(jTextField22.getText(), jTextField23.getText(), jTextField24.getText(), jTextField21.getText());
             // // Patient ADT test
             Patient P = new Patient(idCard, patientName, nation, location, weakness, tell, jTextField11.getText());
+            ID_Patient idPatient = new ID_Patient();
+            idPatient.setId_Card(jTextField3.getText());
 
             // // writing data to file csv
             String str =
