@@ -35,7 +35,7 @@ public class ReadWriteTreatmentData implements ReadData, WriteData {
     @Override
     public void readData(String id) {
         try {
-            file = new File("./File/treatment.txt");
+            file = new File("./File/Hospital(Treatment).csv");
             fr = new FileReader(file);
             br = new BufferedReader(fr);
             String line;

@@ -6,7 +6,7 @@ public class Drug {
     private ArrayList<String> drugs;
     private ArrayList<String> tDrug;
 
-    public Drug(ArrayList<String> drug, ArrayList tDrug) {
+    public Drug(ArrayList<String> drug, ArrayList<String> tDrug) {
         this.drugs = drug;
         this.tDrug = tDrug;
         checkRep();
@@ -18,10 +18,15 @@ public class Drug {
         }
     }
 
-    public ArrayList<String> getDrugNames() {
-        return drugs;
+    public String getDrugNames() {
+        String saveFileOfDrug = drugs.toString();
+        saveFileOfDrug = saveFileOfDrug.replace(",", "#");
+        return saveFileOfDrug;
     }
-    public ArrayList<String> gettDrug() {
-        return tDrug;
+
+    public String getTypeDrug() {
+        String saveFileOfTypeDrug = tDrug.toString();
+        saveFileOfTypeDrug = saveFileOfTypeDrug.replace(",", "#");
+        return saveFileOfTypeDrug;
     }
 }

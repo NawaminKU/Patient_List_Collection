@@ -5,12 +5,16 @@ package lib.PatientComponent;
 public class PatientLocation {
     private String numberHouse;
     private String village;
+    private String road;
+    private String sub_District;
     private String district;
     private String city;
 
-    public PatientLocation(String numberHouse, String village, String district, String city) {
+    public PatientLocation(String numberHouse, String village, String road, String sub_District, String district, String city) {
         this.numberHouse = numberHouse;
         this.village = village;
+        this.road = road;
+        this.sub_District = sub_District;
         this.district = district;
         this.city = city;
         checkRep();
@@ -32,6 +36,9 @@ public class PatientLocation {
         }
         if (village == null || village.equals("")) {
             throw new IllegalArgumentException("village not must be a null");
+        }
+        if (road == null || village.equals("")) {
+            road = "-";
         }
         if (district == null || district.equals("")) {
             throw new IllegalArgumentException("district not must be a null");
@@ -55,6 +62,14 @@ public class PatientLocation {
      */
     public String getVillage() {
         return village;
+    }
+
+    public String getRoad() {
+        return road;
+    }
+
+    public  String getSub_District() {
+        return sub_District;
     }
 
     /**
